@@ -1,0 +1,136 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  animation: slide-in 0.4s ease;
+  overflow: hidden;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.notification::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+
+.notification-success {
+  background-color: #f1f9f7;
+}
+
+.notification-success::before {
+  background-color: #27ae60;
+}
+
+.notification-error {
+  background-color: #fdf3f2;
+}
+
+.notification-error::before {
+  background-color: #e74c3c;
+}
+
+.notification-warning {
+  background-color: #fcf8f2;
+}
+
+.notification-warning::before {
+  background-color: #f1c40f;
+}
+
+.notification-info {
+  background-color: #f0f7fd;
+}
+
+.notification-info::before {
+  background-color: #3498db;
+}
+
+.notification-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.notification-success .notification-icon {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.notification-error .notification-icon {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+.notification-warning .notification-icon {
+  background-color: rgba(241, 196, 15, 0.1);
+  color: #f1c40f;
+}
+
+.notification-info .notification-icon {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.notification-close:hover {
+  color: #555;
+}
+
+@media (max-width: 576px) {
+  .notification {
+    max-width: calc(100% - 40px);
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+}

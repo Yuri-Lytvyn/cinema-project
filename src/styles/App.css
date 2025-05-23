@@ -1,0 +1,276 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --light-text-color: #666;
+  --header-height: auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Хедер */
+.app-header {
+  background-color: var(--secondary-color);
+  color: white;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-right: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav li a {
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.main-nav li a:hover, 
+.main-nav li a.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-banner {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #1a2530 100%);
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.header-banner h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.header-banner p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Контент */
+.app-content {
+  flex: 1;
+  padding: 40px 0;
+}
+
+/* Футер */
+.app-footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 40px 5%;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.footer-section p {
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+address {
+  font-style: normal;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo-container {
+    margin-bottom: 10px;
+  }
+  
+  .header-banner h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 600px) {
+  .header-container {
+    padding: 15px 3%;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .logo-container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .main-nav li a {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+  
+  .header-banner {
+    padding: 30px 3%;
+  }
+  
+  .header-banner h2 {
+    font-size: 1.5rem;
+  }
+  
+  .header-banner p {
+    font-size: 1rem;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 30px 3%;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}

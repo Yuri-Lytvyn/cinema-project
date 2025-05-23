@@ -1,0 +1,127 @@
+.booking-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.booking-header {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-header h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.back-link {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.movie-details {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.movie-poster {
+  flex: 0 0 250px;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-info h2 {
+  color: #2c3e50;
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+.movie-genre {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.movie-description {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.movie-datetime {
+  color: #555;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.movie-not-found {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-not-found h2 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.movie-not-found p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .movie-details {
+    flex-direction: column;
+  }
+  
+  .movie-poster {
+    flex: 0 0 auto;
+    max-width: 200px;
+    margin: 0 auto 20px;
+  }
+}
