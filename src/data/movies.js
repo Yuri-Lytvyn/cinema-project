@@ -13,7 +13,7 @@ export const movies = [
     poster: "https://multiplex.ua/images/66/7c/667c0e22acfe0089ff8d3d6ba19d4d74.jpeg",
     description: "Кіноверсія театральної постановки про митців, які жили у будинку «Слово» у Харкові на початку ХХ століття.",
     genre: "Мюзикл, Історичний",
-    dateTime: "16 травня 2025, 19:00"
+    dateTime: "16 травня 2025, 19:00" 
   },
   {
     id: 3,
