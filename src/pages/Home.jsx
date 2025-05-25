@@ -4,7 +4,7 @@ import { movies } from '../data/movies';
 import '../styles/Home.css';
 
 const Home = () => {
-  return (
+  return ( 
     <div className="home-page">
       <div className="home-content">
         <MovieList movies={movies} />
