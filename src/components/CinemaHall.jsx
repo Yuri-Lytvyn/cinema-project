@@ -198,4 +198,4 @@ const CinemaHall = ({ movieId }) => {
   );
 };
 
-export default CinemaHall;
+export default CinemaHall; 
