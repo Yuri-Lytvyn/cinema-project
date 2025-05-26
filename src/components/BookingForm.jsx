@@ -4,7 +4,7 @@ import '../styles/BookingForm.css';
 const BookingForm = ({ selectedSeats, onSubmit, onCancel }) => {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
+    phone: '', 
     email: ''
   });
 

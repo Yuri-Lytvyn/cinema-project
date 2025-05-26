@@ -126,7 +126,7 @@
 @media (max-width: 576px) {
   .booking-form-container {
     padding: 20px 15px;
-  }
+  } 
   
   .form-actions {
     flex-direction: column;
