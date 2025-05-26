@@ -12,7 +12,7 @@ class BookingService {
   static getBookedSeatsByMovieId(movieId) {
     const bookings = this.getBookingsByMovieId(movieId);
     let bookedSeats = [];
-    
+     
     bookings.forEach(booking => {
       bookedSeats = [...bookedSeats, ...booking.seats];
     });
