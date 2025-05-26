@@ -24,7 +24,7 @@ const Notification = ({ type, message, duration = 5000, onClose }) => {
     <div className={`notification notification-${type}`}>
       <div className="notification-icon">
         {type === 'success' && '✓'}
-        {type === 'error' && '✗'}
+        {type === 'error' && '✗'} 
         {type === 'warning' && '⚠'}
         {type === 'info' && 'ℹ'}
       </div>
