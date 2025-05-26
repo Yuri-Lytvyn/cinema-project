@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import CinemaHall from '../components/CinemaHall';
 import { movies } from '../data/movies';
-import '../styles/Booking.css';
+import '../styles/Booking.css'; 
 
 const Booking = () => {
   const { id } = useParams();
