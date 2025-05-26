@@ -20,7 +20,7 @@ const MovieCard = ({ movie }) => {
         </p>
         <a 
           href={`/booking/${movie.id}`} 
-          className="booking-button"
+          className="booking-button" 
           onClick={(e) => e.stopPropagation()} 
         >
           Забронювати
